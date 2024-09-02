@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="bg-gray">
+        <h1 class="text-center font-mono text-2xl" id="test"></h1>
+    </div>
+</body>
+</html>
+
+<script>
+    let arr = [
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10],
+        [1,2,3,4,5,6,7,8,9,10]
+    ]
+    
+
+    for(let i = 0; i < arr.length; i++){
+        let mulNum = i
+        document.getElementById('test').innerHTML += `<hr> <h1 class="text-4xl bg-cyan-500 border-5 p-5 rounded-xl"> Multiplication of ${mulNum+1} </h1> <br> `
+
+        for(let j = 0; j < arr[i].length ;j ++){
+            let multiplication = ((i+1) * (j+1))
+            document.getElementById('test').innerHTML += `<div class="bg-gray-500 border-5 p-5  hover:bg-gray-800"> <br>${i+1} x ${j+1} = ${multiplication}<br> </div>`
+        }
+    }
+</script>
